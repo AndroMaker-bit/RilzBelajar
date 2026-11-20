@@ -136,14 +136,17 @@ export const KisiKisiTable: React.FC<KisiKisiTableProps> = ({
               <span className="layers-pill text-[10px] uppercase font-mono tracking-wider">
                 {subject.grade} · {subject.academicYear}
               </span>
-              <AASCountdown targetDateStr="2026-11-23T07:30:00+07:00" />
+              <AASCountdown
+                targetDateStr="2026-11-23T07:30:00+07:00"
+                label={`Menuju Ujian ${subject.name}`}
+              />
             </div>
             
             <h1 className="text-2xl md:text-3xl font-semibold tracking-tight text-white">
               {subject.name}
             </h1>
             <p className="text-xs text-[#9496a1] max-w-xl leading-relaxed">
-              Daftar 40 indikator resmi Asesmen Akhir Semester (AAS). Gunakan kartu indikator untuk menandai pemahaman, latihan soal terarah, atau tanya AI Tutor.
+              Daftar {subject.kisiKisi.length} indikator resmi persiapan ujian. Gunakan kartu indikator untuk menandai pemahaman, latihan soal terarah, atau tanya AI Tutor.
             </p>
           </div>
 

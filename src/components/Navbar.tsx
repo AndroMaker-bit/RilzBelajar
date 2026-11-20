@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   pelajarin<span className="text-[#9496a1]">.ai</span>
                 </span>
                 <span className="layers-pill py-0.5 px-2 text-[10px] text-white/80 bg-white/[0.06] border-white/[0.1]">
-                  AAS VIP
+                  EXAM VIP
                 </span>
               </div>
             </div>

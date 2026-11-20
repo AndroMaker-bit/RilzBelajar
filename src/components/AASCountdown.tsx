@@ -3,10 +3,12 @@ import { Timer, Clock, AlertCircle, CheckCircle } from 'lucide-react';
 
 interface AASCountdownProps {
   targetDateStr?: string; // default: 2026-11-23T07:30:00+07:00
+  label?: string; // default: 'Menuju Hari H Ujian'
 }
 
 export const AASCountdown: React.FC<AASCountdownProps> = ({
   targetDateStr = '2026-11-23T07:30:00+07:00',
+  label = 'Menuju Hari H Ujian',
 }) => {
   const [timeLeft, setTimeLeft] = useState<{
     days: number;
@@ -44,7 +46,7 @@ export const AASCountdown: React.FC<AASCountdownProps> = ({
     return (
       <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-800 text-emerald-300 text-xs font-medium">
         <CheckCircle className="w-3.5 h-3.5" />
-        <span>Ujian AAS Sedang / Telah Berlangsung</span>
+        <span>Ujian Sedang / Telah Berlangsung</span>
       </div>
     );
   }
@@ -79,7 +81,7 @@ export const AASCountdown: React.FC<AASCountdownProps> = ({
       </div>
 
       <span className="hidden sm:inline text-[#626573] text-[10px] uppercase font-mono">
-        Menuju AAS IPA
+        {label}
       </span>
     </div>
   );

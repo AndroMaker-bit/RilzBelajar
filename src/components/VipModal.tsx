@@ -30,7 +30,7 @@ export const VipModal: React.FC<VipModalProps> = ({
   };
 
   const handleWhatsAppBuy = () => {
-    const text = encodeURIComponent('Halo Rilz, mau beli Pass VIP Pelajarin.ai seharga Rp15.000 untuk persiapan ujian AAS!');
+    const text = encodeURIComponent('Halo Rilz, mau beli Pass VIP Pelajarin.ai seharga Rp15.000 untuk persiapan ujian!');
     window.open(`https://wa.me/?text=${text}`, '_blank');
   };
 
@@ -59,7 +59,7 @@ export const VipModal: React.FC<VipModalProps> = ({
             <div className="flex items-center gap-2">
               <h3 className="text-base font-semibold text-white">Pass VIP Pelajarin.ai</h3>
               <span className="layers-pill py-0.5 px-2 text-[10px] text-white/80 bg-white/[0.06] border-white/[0.1]">
-                AAS 2026
+                VIP 2026
               </span>
             </div>
             <p className="text-xs text-[#9496a1]">Akses penuh tanpa batas sampai ujian selesai</p>
@@ -101,7 +101,7 @@ export const VipModal: React.FC<VipModalProps> = ({
                   Rp 15.000
                 </span>
                 <span className="text-[11px] text-[#626573] block mt-0.5">
-                  Bebas dipakai sampai ujian AAS selesai
+                  Bebas dipakai sampai seluruh ujian selesai
                 </span>
               </div>
               <span className="layers-pill py-1 px-3 text-xs text-white bg-white/[0.06] border-white/[0.1]">
@@ -112,9 +112,9 @@ export const VipModal: React.FC<VipModalProps> = ({
             {/* Benefits Checklist */}
             <div className="space-y-2.5 text-xs text-[#d1d5db]">
               {[
-                'Akses kisi-kisi AAS lengkap (Preloaded 40 IPA Kelas IX + Multi-Mapel Bebas Tambah)',
+                'Akses kisi-kisi ujian lengkap (AAS / SAS / PAS & Multi-Mapel Bebas Tambah)',
                 'AI Tutor 24/7 tanpa batas pertanyaan (Logika nalar tongkrongan)',
-                'Simulasi ujian AAS berulang kali dengan timer resmi & auto-scoring',
+                'Simulasi ujian berulang kali dengan timer resmi & auto-scoring',
                 'Fitur khusus review kilat soal-soal yang salah saja',
                 'Cetak / simpan PDF Smart Cheat Sheet untuk dibaca sebelum ujian',
               ].map((b, idx) => (

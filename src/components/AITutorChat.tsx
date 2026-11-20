@@ -135,7 +135,7 @@ Tanyain konsep materi yang belum paham, rumus yang bikin pusing, atau minta trik
             <h3 className="text-xs font-semibold text-white flex items-center gap-2">
               <span>24/7 AI Private Tutor</span>
               <span className="layers-pill py-0.5 px-2 text-[10px] text-white/90">
-                Grounded on AAS
+                Grounded on Exam
               </span>
             </h3>
             <p className="text-[11px] text-[#9496a1]">Penjelasan nalar praktis langsung ke inti konsep</p>

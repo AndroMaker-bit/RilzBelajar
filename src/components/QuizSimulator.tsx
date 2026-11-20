@@ -220,7 +220,7 @@ export const QuizSimulator: React.FC<QuizSimulatorProps> = ({
                 : 'text-[#9496a1] hover:text-white'
             }`}
           >
-            Simulasi Resmi AAS
+            Simulasi Resmi Ujian
           </button>
 
           {targetedItem && (
@@ -455,7 +455,7 @@ export const QuizSimulator: React.FC<QuizSimulatorProps> = ({
                   <Award className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold text-white">Hasil Simulasi AAS</h3>
+                  <h3 className="text-base font-semibold text-white">Hasil Simulasi Ujian</h3>
                   <p className="text-xs text-[#9496a1]">
                     Benar: <span className="text-emerald-400 font-bold">{scoreResult.correct}</span> dari {scoreResult.total} soal
                   </p>

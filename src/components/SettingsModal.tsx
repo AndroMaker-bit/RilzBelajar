@@ -169,7 +169,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
             <h2 className="text-lg font-semibold text-white tracking-tight">Study AI Private Vault</h2>
             <p className="text-xs text-[#9496a1] mt-1.5 mb-6">
-              Masukkan Whitelist Passcode untuk membuka akses dashboard, kuota AI, dan kisi-kisi AAS.
+              Masukkan Whitelist Passcode untuk membuka akses dashboard, kuota AI, dan seluruh materi ujian.
             </p>
 
             <form onSubmit={handleUnlock} className="space-y-4">

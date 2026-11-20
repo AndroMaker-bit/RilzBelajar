@@ -150,7 +150,7 @@ export const App: React.FC = () => {
 
           {/* Dashboard Footer */}
           <footer className="relative z-10 border-t border-white/[0.06] py-6 text-center text-xs text-[#626573] font-mono">
-            <p>pelajarin.ai · AAS VIP Preparation · 100% Free & Local</p>
+            <p>pelajarin.ai · VIP Exam Preparation · 100% Free & Local</p>
           </footer>
         </>
       )}

@@ -47,14 +47,17 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                   pelajarin<span className="text-[#9496a1]">.ai</span>
                 </span>
                 <span className="layers-pill py-0.5 px-2 text-[10px] text-white/80 bg-white/[0.06] border-white/[0.1]">
-                  AAS VIP
+                  EXAM VIP
                 </span>
               </div>
             </div>
 
             {/* Middle Countdown Pill (Desktop) */}
             <div className="hidden md:block">
-              <AASCountdown targetDateStr="2026-11-23T07:30:00+07:00" />
+              <AASCountdown
+                targetDateStr="2026-11-23T07:30:00+07:00"
+                label="Menuju Hari H Ujian"
+              />
             </div>
 
             {/* Right Action */}
@@ -99,18 +102,21 @@ export const LandingPage: React.FC<LandingPageProps> = ({
         
         {/* Countdown Badge on Mobile */}
         <div className="md:hidden mb-6 flex justify-center">
-          <AASCountdown targetDateStr="2026-11-23T07:30:00+07:00" />
+          <AASCountdown
+            targetDateStr="2026-11-23T07:30:00+07:00"
+            label="Menuju Hari H Ujian"
+          />
         </div>
 
         {/* Hero Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.12] text-xs text-[#d1d5db] mb-6 shadow-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-medium text-white/90">Edisi Eksklusif Asesmen Akhir Semester (AAS) 2026</span>
+          <span className="font-medium text-white/90">Edisi Eksklusif Ujian Semester (AAS / SAS / PAS) 2026</span>
         </div>
 
         {/* Hero Title */}
         <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-6">
-          Taklukkan Kisi-Kisi Ujian AAS.{' '}
+          Taklukkan Kisi-Kisi Ujian Semester.{' '}
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-[#d1d5db] to-[#626573]">
             Lebih Cepat, Lebih Masuk Akal.
           </span>
@@ -118,7 +124,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
         {/* Hero Subtitle */}
         <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#9496a1] leading-relaxed mb-8">
-          Platform belajar VIP berbasis AI untuk taklukkan seluruh mata pelajaran Asesmen Akhir Semester (AAS). Dilengkapi AI Tutor berlogika nalar praktis, simulasi ujian berwaktu otomatis, cheat sheet siap cetak, serta kebebasan tambah kisi-kisi mapel apa saja.
+          Platform belajar VIP berbasis AI untuk taklukkan seluruh mata pelajaran ujian semester (AAS, SAS, PAS, & Ujian Sekolah). Dilengkapi AI Tutor berlogika nalar praktis, simulasi ujian berwaktu otomatis, cheat sheet siap cetak, serta kebebasan tambah kisi-kisi mapel apa saja.
         </p>
 
         {/* Dual Primary Action Buttons */}
@@ -143,7 +149,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
         {/* Social Proof Metric Micro-strip */}
         <div className="flex items-center justify-center gap-6 sm:gap-10 mt-10 text-[11px] text-[#626573] font-mono">
-          <span>✓ SEMUA MAPEL & KISI-KISI AAS</span>
+          <span>✓ SEMUA MAPEL & KISI-KISI UJIAN</span>
           <span>✓ AI MODEL ZERO-LATENCY</span>
           <span>✓ 100% BEBAS IKLAN</span>
         </div>
@@ -227,9 +233,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 <Target className="w-4 h-4 text-white" />
               </div>
 
-              <h3 className="text-base font-semibold text-white">Cockpit Simulasi AAS</h3>
+              <h3 className="text-base font-semibold text-white">Cockpit Simulasi Ujian</h3>
               <p className="text-xs text-[#9496a1] mt-1 mb-4">
-                Format ujian resmi 45 menit lengkap dengan navigasi peta soal dan skor otomatis.
+                Format simulasi ujian resmi dengan timer berwaktu otomatis, navigasi peta soal, dan skor instan.
               </p>
 
               {/* Interactive Mini Question Palette Preview */}
@@ -348,7 +354,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="space-y-3 text-center md:text-left">
               <span className="layers-pill py-0.5 px-3 text-[10px] text-white/90 bg-white/[0.06] border-white/[0.1]">
-                PENAWARAN SPESIAL AAS
+                PENAWARAN SPESIAL UJIAN
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
                 Akses Penuh Semua Mapel VIP
@@ -362,7 +368,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                   <div className="w-4 h-4 rounded-full bg-white/[0.08] text-white flex items-center justify-center text-[10px]">
                     <Check className="w-2.5 h-2.5" />
                   </div>
-                  <span>Semua Kisi-Kisi AAS & Mapel Kustom</span>
+                  <span>Semua Kisi-Kisi Ujian & Mapel Kustom</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-white/[0.08] text-white flex items-center justify-center text-[10px]">
@@ -406,7 +412,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       {/* 5. FOOTER */}
       {/* ======================================================== */}
       <footer className="relative z-10 border-t border-white/[0.06] py-8 text-center text-xs text-[#626573] font-mono">
-        <p>pelajarin.ai · AAS VIP Preparation · Dibuat Khusus untuk Juara Kelas</p>
+        <p>pelajarin.ai · Platform Persiapan Ujian VIP · Dibuat Khusus untuk Juara Kelas</p>
       </footer>
 
     </div>
