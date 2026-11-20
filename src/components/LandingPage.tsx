@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   ArrowRight,
-  Brain,
   Target,
   Bot,
   Zap,
@@ -9,10 +8,11 @@ import {
   ShieldCheck,
   Check,
   ChevronRight,
-  Lock,
   Key,
   ArrowUpRight,
   Layers,
+  Sparkles,
+  BookOpen,
 } from 'lucide-react';
 import { AASCountdown } from './AASCountdown';
 
@@ -43,10 +43,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 <Zap className="w-4 h-4 text-white" />
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-sm tracking-tight text-white">
+                <span className="font-display font-bold text-base tracking-tight text-white">
                   pelajarin<span className="text-[#9496a1]">.ai</span>
                 </span>
-                <span className="layers-pill py-0.5 px-2 text-[10px] text-white/80 bg-white/[0.06] border-white/[0.1]">
+                <span className="layers-pill py-0.5 px-2 text-[10px] text-white/80 bg-white/[0.06] border-white/[0.1] font-mono">
                   EXAM VIP
                 </span>
               </div>
@@ -65,7 +65,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               {isUnlocked ? (
                 <button
                   onClick={onOpenDashboard}
-                  className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white hover:bg-white/90 text-black text-xs font-semibold transition-all shadow-md active:scale-[0.98] cursor-pointer"
+                  className="metallic-btn-primary flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold cursor-pointer active:scale-[0.98]"
                 >
                   <span>Buka Dashboard</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -74,7 +74,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 <div className="flex items-center gap-2">
                   <button
                     onClick={onOpenVipModal}
-                    className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0e1017] hover:bg-white/[0.06] border border-white/[0.08] hover:border-white/[0.2] text-[#9496a1] hover:text-white text-xs font-medium transition-all cursor-pointer"
+                    className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#0e1017] hover:bg-white/[0.06] border border-white/[0.1] hover:border-white/[0.2] text-[#9496a1] hover:text-white text-xs font-medium transition-all cursor-pointer"
                   >
                     <Key className="w-3 h-3 text-white/80" />
                     <span>Masuk / Beli PIN</span>
@@ -82,7 +82,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
                   <button
                     onClick={onOpenDashboard}
-                    className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white hover:bg-white/90 text-black text-xs font-semibold transition-all shadow-md active:scale-[0.98] cursor-pointer"
+                    className="metallic-btn-primary flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold cursor-pointer active:scale-[0.98]"
                   >
                     <span>Masuk ke App</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -96,64 +96,210 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </header>
 
       {/* ======================================================== */}
-      {/* 2. HERO SECTION */}
+      {/* 2. HERO SECTION - ASYMMETRIC SPLIT (55% / 45%) */}
       {/* ======================================================== */}
-      <section className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-12 text-center">
+      <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-14 sm:pb-20">
         
         {/* Countdown Badge on Mobile */}
-        <div className="md:hidden mb-6 flex justify-center">
+        <div className="md:hidden mb-6 flex justify-start">
           <AASCountdown
             targetDateStr="2026-11-23T07:30:00+07:00"
             label="Menuju Hari H Ujian"
           />
         </div>
 
-        {/* Hero Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.12] text-xs text-[#d1d5db] mb-6 shadow-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-medium text-white/90">Sistem Belajar Cerdas Berbasis AI</span>
-          <span className="text-white/30">·</span>
-          <span className="text-[#9496a1] font-mono text-[11px]">2026 Edition</span>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          {/* ================= SISI KIRI (55%): Rata Kiri, Tipografi Tajam ================= */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left">
+            
+            {/* Industrial Sharp Metal Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg metallic-badge text-xs mb-6 shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="font-mono text-[11px] text-white/90 font-semibold tracking-wider">
+                AI EXAM ENGINE
+              </span>
+              <span className="text-white/20">|</span>
+              <span className="text-[#9496a1] text-[11px] font-mono">2026 EDITION</span>
+            </div>
 
-        {/* Hero Title */}
-        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-6">
-          Taklukkan Kisi-Kisi Ujian Semester.{' '}
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-[#d1d5db] to-[#626573]">
-            Lebih Cepat, Lebih Masuk Akal.
-          </span>
-        </h1>
+            {/* Headline Utama Rata Kiri (Space Grotesk) */}
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08] mb-6">
+              Taklukkan Kisi-Kisi Ujian Semester.{' '}
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-[#d1d5db] to-[#6b7280]">
+                Paham Konsep, Amankan Nilai A.
+              </span>
+            </h1>
 
-        {/* Hero Subtitle */}
-        <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#9496a1] leading-relaxed mb-8">
-          Platform belajar VIP berbasis AI untuk taklukkan seluruh mata pelajaran ujian semester (AAS, SAS, PAS, & Ujian Sekolah). Dilengkapi AI Tutor berlogika nalar praktis, simulasi ujian berwaktu otomatis, cheat sheet siap cetak, serta kebebasan tambah kisi-kisi mapel apa saja.
-        </p>
+            {/* Subtitle Natural & Tajam */}
+            <p className="text-sm sm:text-base text-[#9496a1] leading-relaxed max-w-xl mb-8">
+              Bypass cara belajar kuno yang bikin pusing. Dilengkapi AI Tutor berlogika nalar praktis, simulasi ujian berwaktu otomatis, dan cheat sheet siap cetak untuk seluruh mata pelajaran.
+            </p>
 
-        {/* Dual Primary Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
-          <button
-            onClick={onOpenDashboard}
-            className="w-full sm:w-auto flex-1 py-3 px-6 rounded-full bg-white hover:bg-white/90 text-black text-xs font-semibold transition-all shadow-xl hover:shadow-white/10 active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer group"
-          >
-            <span>Mulai Belajar Sekarang</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </button>
+            {/* Dual CTA Buttons Metalik */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto mb-10">
+              <button
+                onClick={onOpenDashboard}
+                className="metallic-btn-primary py-3.5 px-7 rounded-xl text-xs font-semibold flex items-center justify-center gap-2.5 cursor-pointer group active:scale-[0.98]"
+              >
+                <span>Mulai Belajar Sekarang</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </button>
 
-          <button
-            onClick={onOpenVipModal}
-            className="w-full sm:w-auto py-3 px-6 rounded-full bg-[#0e1017] hover:bg-white/[0.08] border border-white/[0.12] hover:border-white/[0.25] text-white text-xs font-medium transition-all flex items-center justify-center gap-2 cursor-pointer group"
-          >
-            <Key className="w-3.5 h-3.5 text-white/80 transition-transform group-hover:rotate-12" />
-            <span>Ambil Pass VIP · Rp 15k</span>
-            <ArrowUpRight className="w-3.5 h-3.5 text-[#626573] group-hover:text-white transition-colors" />
-          </button>
-        </div>
+              <button
+                onClick={onOpenVipModal}
+                className="metallic-btn-secondary py-3.5 px-7 rounded-xl text-xs font-medium flex items-center justify-center gap-2.5 cursor-pointer group active:scale-[0.98]"
+              >
+                <Key className="w-3.5 h-3.5 text-white/80 transition-transform group-hover:rotate-12" />
+                <span>Ambil Pass VIP · Rp 15k</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#626573] group-hover:text-white transition-colors" />
+              </button>
+            </div>
 
-        {/* Social Proof Metric Micro-strip */}
-        <div className="flex items-center justify-center gap-6 sm:gap-10 mt-10 text-[11px] text-[#626573] font-mono">
-          <span>✓ SEMUA MAPEL & KISI-KISI UJIAN</span>
-          <span>✓ AI MODEL ZERO-LATENCY</span>
-          <span>✓ 100% BEBAS IKLAN</span>
+            {/* Social Proof Bergaya Monokrom */}
+            <div className="flex items-center gap-4 pt-4 border-t border-white/[0.08] w-full max-w-lg">
+              <div className="flex -space-x-2 overflow-hidden shrink-0">
+                {[
+                  { initial: 'R', bg: 'bg-[#181c26] text-white/90' },
+                  { initial: 'A', bg: 'bg-[#222838] text-white/90' },
+                  { initial: 'K', bg: 'bg-[#2e364a] text-white/90' },
+                  { initial: 'M', bg: 'bg-[#161a24] text-white/90' },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className={`inline-flex items-center justify-center h-8 w-8 rounded-full ring-2 ring-[#050608] ${item.bg} font-mono text-[10px] font-bold shadow`}
+                  >
+                    {item.initial}
+                  </div>
+                ))}
+              </div>
+              <div className="text-left text-xs">
+                <div className="flex items-center gap-1.5 text-white font-mono text-[11px] mb-0.5">
+                  <span className="tracking-widest text-white">★★★★★</span>
+                  <span className="font-bold text-white">4.9/5.0</span>
+                </div>
+                <p className="text-[#9496a1] text-[11px] leading-tight">
+                  <strong className="text-white font-medium">1.500+ siswa</strong> siap tempur ujian semester
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* ================= SISI KANAN (45%): FLOATING PRODUCT UI STACK ================= */}
+          <div className="lg:col-span-5 relative mt-8 lg:mt-0">
+            
+            {/* Subtle Ambient Light Glow Behind Mockup */}
+            <div className="absolute -inset-2 bg-gradient-to-tr from-white/[0.03] to-transparent rounded-3xl blur-2xl pointer-events-none" />
+
+            {/* Floating Card 1: Top-Right AI Tutor Whisper Card */}
+            <div className="relative lg:-top-3 lg:-right-3 z-20 mb-3 lg:mb-0 max-w-sm ml-auto metallic-badge rounded-2xl p-3.5 backdrop-blur-xl border border-white/[0.14] shadow-2xl">
+              <div className="flex items-center gap-2 mb-1.5">
+                <div className="w-5 h-5 rounded-md bg-white/10 flex items-center justify-center text-white">
+                  <Bot className="w-3 h-3 text-white" />
+                </div>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-white/90 font-semibold">
+                  AI Tutor · Nalar Kilat
+                </span>
+                <span className="ml-auto w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              </div>
+              <p className="text-xs text-[#d1d5db] leading-relaxed">
+                "Jarak naik 3x ➔ Gayanya langsung dibagi 3² (bagi 9) ➔ <strong className="text-white">1/9 F semula</strong>. Selesai 5 detik!"
+              </p>
+            </div>
+
+            {/* Main Center Card: Cockpit Simulasi Berwaktu Live */}
+            <div className="relative z-10 metallic-sheen rounded-2xl p-5 sm:p-6 border border-white/[0.14] shadow-2xl backdrop-blur-2xl">
+              
+              {/* Header Bar */}
+              <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/[0.08]">
+                <div className="flex items-center gap-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80 animate-pulse" />
+                  <span className="font-mono text-[11px] text-white font-medium">
+                    SIMULASI BERWAKTU
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 font-mono text-[11px] text-[#9496a1]">
+                  <span className="px-2 py-0.5 rounded bg-white/[0.06] text-white border border-white/[0.08]">
+                    42:15
+                  </span>
+                  <span>NO 14/40</span>
+                </div>
+              </div>
+
+              {/* Soal Preview */}
+              <div className="mb-4">
+                <span className="inline-block px-2 py-0.5 rounded bg-white/[0.06] text-[10px] font-mono text-[#9496a1] mb-2 border border-white/[0.06]">
+                  INDIKATOR C3 · LISTRIK STATIS
+                </span>
+                <p className="text-xs sm:text-sm text-white font-medium leading-relaxed">
+                  Dua buah muatan mula-mula mengalami gaya tolak F. Jika jarak kedua muatan dijauhkan menjadi 3 kali semula, besar gaya tolaknya menjadi...
+                </p>
+              </div>
+
+              {/* 4 Opsi Jawaban (Mockup) */}
+              <div className="space-y-2 mb-4">
+                {[
+                  { key: 'A', text: '3 kali F semula', active: false },
+                  { key: 'B', text: '1/9 kali F semula (Trik Nalar)', active: true },
+                  { key: 'C', text: '9 kali F semula', active: false },
+                  { key: 'D', text: '1/3 kali F semula', active: false },
+                ].map((opt) => (
+                  <div
+                    key={opt.key}
+                    className={`flex items-center gap-2.5 p-2.5 rounded-xl text-xs transition-all ${
+                      opt.active
+                        ? 'bg-white/[0.12] text-white border border-white/30 shadow-inner'
+                        : 'bg-[#06070a]/60 text-[#9496a1] border border-white/[0.06]'
+                    }`}
+                  >
+                    <span
+                      className={`w-5 h-5 rounded-md flex items-center justify-center font-mono text-[10px] font-bold ${
+                        opt.active
+                          ? 'bg-white text-black'
+                          : 'bg-white/[0.08] text-white/70'
+                      }`}
+                    >
+                      {opt.key}
+                    </span>
+                    <span className={opt.active ? 'font-medium text-white' : ''}>
+                      {opt.text}
+                    </span>
+                    {opt.active && (
+                      <span className="ml-auto text-[10px] font-mono text-emerald-400 font-semibold">
+                        ✓ Terpilih
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Score Forecast Bar Preview */}
+              <div className="pt-3 border-t border-white/[0.08] flex items-center justify-between text-[11px] font-mono">
+                <span className="text-[#9496a1]">PREDIKSI NILAI:</span>
+                <span className="text-emerald-400 font-bold bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40">
+                  95 / 100 (PREDIKAT A)
+                </span>
+              </div>
+
+            </div>
+
+            {/* Floating Card 3: Bottom-Left Smart Cheat Sheet Snippet */}
+            <div className="relative lg:-bottom-4 lg:-left-3 z-20 mt-3 lg:mt-0 max-w-xs metallic-badge rounded-2xl p-3 backdrop-blur-xl border border-white/[0.14] shadow-2xl">
+              <div className="flex items-center gap-2 mb-1.5">
+                <Printer className="w-3.5 h-3.5 text-white/80" />
+                <span className="text-[10px] font-mono uppercase tracking-wider text-white/90 font-semibold">
+                  Cheat Sheet Siap Cetak
+                </span>
+                <span className="ml-auto text-[9px] font-mono text-[#9496a1]">Format A4</span>
+              </div>
+              <div className="p-2 rounded-lg bg-[#06070a] border border-white/[0.08] font-mono text-[10px] text-white/90">
+                <span className="text-[#9496a1]">Listrik Dinamis:</span> V = I × R (Veri = Ika × Roni)
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
       </section>
@@ -165,10 +311,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({
         
         <div className="mb-8 text-center sm:text-left">
           <span className="text-[10px] uppercase font-mono tracking-widest text-[#9496a1] font-semibold block mb-1">
-            ARSITEKTUR BELAJAR VIP
+            FITUR ANDALAN
           </span>
-          <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-            Dirancang Khusus untuk Siswa yang Ingin Nilai A
+          <h2 className="font-display text-xl sm:text-3xl font-bold text-white tracking-tight">
+            Semua yang Kamu Butuhkan Buat Juara di Hari H
           </h2>
         </div>
 
@@ -184,8 +330,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                     <Bot className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-white">AI Tutor Logika Nalar Tongkrongan</h3>
-                    <p className="text-xs text-[#9496a1]">Pahami materi rumit dengan logika nalar praktis</p>
+                    <h3 className="font-display text-base font-semibold text-white">AI Tutor Nalar Praktis</h3>
+                    <p className="text-xs text-[#9496a1]">Pahami materi rumit dengan logika analogi sederhana, bukan rumus hafalan</p>
                   </div>
                 </div>
                 <span className="layers-pill py-0.5 px-2 text-[10px] text-white/90 bg-white/[0.06] border-white/[0.1] font-mono">
@@ -228,14 +374,14 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             </div>
           </div>
 
-          {/* BENTO 2 (Col 3): Simulasi AAS Cockpit 45 Menit */}
+          {/* BENTO 2 (Col 3): Cockpit Simulasi Ujian */}
           <div className="layers-card p-6 sm:p-7 flex flex-col justify-between group hover:border-white/25 transition-all duration-300">
             <div>
               <div className="w-9 h-9 rounded-xl bg-white/[0.06] border border-white/[0.1] flex items-center justify-center text-white mb-4 shadow-inner">
                 <Target className="w-4 h-4 text-white" />
               </div>
 
-              <h3 className="text-base font-semibold text-white">Cockpit Simulasi Ujian</h3>
+              <h3 className="font-display text-base font-semibold text-white">Cockpit Simulasi Ujian</h3>
               <p className="text-xs text-[#9496a1] mt-1 mb-4">
                 Format simulasi ujian resmi dengan timer berwaktu otomatis, navigasi peta soal, dan skor instan.
               </p>
@@ -278,7 +424,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             <div className="pt-4 mt-4 border-t border-white/[0.06]">
               <button
                 onClick={onOpenDashboard}
-                className="w-full py-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-xs text-white font-medium transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full py-2.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-xs text-white font-medium transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>Mulai Simulasi Soal</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -292,7 +438,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               <div className="w-9 h-9 rounded-xl bg-white/[0.06] border border-white/[0.1] flex items-center justify-center text-white mb-3 shadow-inner">
                 <Layers className="w-4 h-4 text-white" />
               </div>
-              <h3 className="text-sm font-semibold text-white">Multi-Mata Pelajaran</h3>
+              <h3 className="font-display text-sm font-semibold text-white">Semua Mapel & Kustom</h3>
               <p className="text-xs text-[#9496a1] mt-1 mb-3">
                 Preloaded 40 kisi-kisi flagship IPA Kelas IX, plus kamu bebas input kisi-kisi Matematika, B. Inggris, IPS, atau mapel apa saja secara instan.
               </p>
@@ -312,7 +458,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               <div className="w-9 h-9 rounded-xl bg-white/[0.06] border border-white/[0.1] flex items-center justify-center text-white mb-3 shadow-inner">
                 <Printer className="w-4 h-4 text-white" />
               </div>
-              <h3 className="text-sm font-semibold text-white">Cheat Sheet Siap Cetak</h3>
+              <h3 className="font-display text-sm font-semibold text-white">Cheat Sheet Siap Cetak</h3>
               <p className="text-xs text-[#9496a1] mt-1 mb-3">
                 Rangkuman rumus + jembatan keledai praktis tiap mapel yang siap di-print di kertas A4 tanpa bikin boros tinta.
               </p>
@@ -329,7 +475,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               <div className="w-9 h-9 rounded-xl bg-white/[0.06] border border-white/[0.1] flex items-center justify-center text-white mb-3 shadow-inner">
                 <ShieldCheck className="w-4 h-4 text-white" />
               </div>
-              <h3 className="text-sm font-semibold text-white">Privat & Tanpa Install</h3>
+              <h3 className="font-display text-sm font-semibold text-white">Privat & Tanpa Install</h3>
               <p className="text-xs text-[#9496a1] mt-1 mb-3">
                 Buka langsung di browser HP maupun laptop. Riwayat nilai tersimpan aman di browser kamu.
               </p>
@@ -358,7 +504,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               <span className="layers-pill py-0.5 px-3 text-[10px] text-white/90 bg-white/[0.06] border-white/[0.1] font-mono tracking-wider">
                 ALL-ACCESS PASS
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight">
                 Akses Penuh Semua Mapel VIP
               </h2>
               <p className="text-xs text-[#9496a1] max-w-md leading-relaxed">
@@ -399,7 +545,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
               <button
                 onClick={onOpenVipModal}
-                className="w-full py-2.5 px-5 rounded-full bg-white hover:bg-white/90 text-black text-xs font-semibold transition-all shadow-md active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer"
+                className="metallic-btn-primary w-full py-2.5 px-5 rounded-full text-xs font-semibold shadow-md active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Key className="w-3.5 h-3.5 text-black" />
                 <span>Ambil Akses VIP</span>
