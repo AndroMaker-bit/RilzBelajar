@@ -113,16 +113,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           {/* ================= SISI KIRI (55%): Rata Kiri, Tipografi Tajam ================= */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
-            {/* Industrial Sharp Metal Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg metallic-badge text-xs mb-6 shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-mono text-[11px] text-white/90 font-semibold tracking-wider">
-                AI EXAM ENGINE
-              </span>
-              <span className="text-white/20">|</span>
-              <span className="text-[#9496a1] text-[11px] font-mono">2026 EDITION</span>
-            </div>
-
             {/* Headline Utama Rata Kiri (Space Grotesk) */}
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08] mb-6">
               Taklukkan Kisi-Kisi Ujian Semester.{' '}
@@ -201,7 +191,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 <span className="text-[10px] font-mono uppercase tracking-wider text-white/90 font-semibold">
                   AI Tutor · Nalar Kilat
                 </span>
-                <span className="ml-auto w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                <span className="ml-auto w-1.5 h-1.5 rounded-full bg-white/60" />
               </div>
               <p className="text-xs text-[#d1d5db] leading-relaxed">
                 "Jarak naik 3x ➔ Gayanya langsung dibagi 3² (bagi 9) ➔ <strong className="text-white">1/9 F semula</strong>. Selesai 5 detik!"
@@ -266,7 +256,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                       {opt.text}
                     </span>
                     {opt.active && (
-                      <span className="ml-auto text-[10px] font-mono text-emerald-400 font-semibold">
+                      <span className="ml-auto text-[10px] font-mono text-white/90 font-medium">
                         ✓ Terpilih
                       </span>
                     )}
@@ -277,7 +267,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               {/* Score Forecast Bar Preview */}
               <div className="pt-3 border-t border-white/[0.08] flex items-center justify-between text-[11px] font-mono">
                 <span className="text-[#9496a1]">PREDIKSI NILAI:</span>
-                <span className="text-emerald-400 font-bold bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40">
+                <span className="text-white font-bold bg-white/[0.08] px-2 py-0.5 rounded border border-white/[0.15]">
                   95 / 100 (PREDIKAT A)
                 </span>
               </div>
@@ -390,7 +380,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               <div className="p-3.5 rounded-2xl bg-[#06070a] border border-white/[0.08] mb-4">
                 <div className="flex items-center justify-between text-[10px] text-[#626573] font-mono mb-2">
                   <span>PETA SOAL</span>
-                  <span className="text-emerald-400 font-semibold">SKOR: 95/100</span>
+                  <span className="text-white font-semibold">SKOR: 95/100</span>
                 </div>
                 <div className="grid grid-cols-5 gap-1 font-mono text-[10px]">
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
@@ -415,7 +405,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                   <span>Fitur 1-klik review khusus soal salah</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-white/70" />
                   <span>Prediksi kelulusan & predikat nilai A</span>
                 </div>
               </div>
@@ -480,7 +470,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 Buka langsung di browser HP maupun laptop. Riwayat nilai tersimpan aman di browser kamu.
               </p>
               <div className="flex items-center gap-2 text-[10px] text-white/80 font-mono">
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                <span className="w-2 h-2 rounded-full bg-white/70" />
                 <span>End-to-End Local Storage</span>
               </div>
             </div>

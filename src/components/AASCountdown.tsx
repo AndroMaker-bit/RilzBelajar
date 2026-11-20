@@ -44,8 +44,8 @@ export const AASCountdown: React.FC<AASCountdownProps> = ({
 
   if (timeLeft.isPast) {
     return (
-      <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-800 text-emerald-300 text-xs font-medium">
-        <CheckCircle className="w-3.5 h-3.5" />
+      <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.12] text-white/90 text-xs font-medium">
+        <CheckCircle className="w-3.5 h-3.5 text-white" />
         <span>Ujian Sedang / Telah Berlangsung</span>
       </div>
     );
@@ -55,13 +55,13 @@ export const AASCountdown: React.FC<AASCountdownProps> = ({
     <div className="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-[#0a0c12]/90 border border-white/[0.12] shadow-inner text-xs">
       {/* Pulsing indicator */}
       <span className="relative flex h-2 w-2">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500" />
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/40 opacity-75" />
+        <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
       </span>
 
       <div className="flex items-center gap-1.5 text-white font-medium">
-        <Timer className="w-3.5 h-3.5 text-cyan-400" />
-        <span className="font-semibold text-cyan-300">
+        <Timer className="w-3.5 h-3.5 text-white/80" />
+        <span className="font-semibold text-white">
           {timeLeft.days > 0 ? `H-${timeLeft.days} Hari` : 'HARI H UJIAN'}
         </span>
       </div>
@@ -75,7 +75,7 @@ export const AASCountdown: React.FC<AASCountdownProps> = ({
           {timeLeft.minutes.toString().padStart(2, '0')}
         </span>
         <span className="text-[#626573]">:</span>
-        <span className="px-1.5 py-0.5 rounded bg-white/[0.08] text-cyan-300">
+        <span className="px-1.5 py-0.5 rounded bg-white/[0.08] text-white font-semibold">
           {timeLeft.seconds.toString().padStart(2, '0')}
         </span>
       </div>
