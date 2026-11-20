@@ -176,116 +176,118 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
           </div>
 
-          {/* ================= SISI KANAN (45%): FLOATING PRODUCT UI STACK ================= */}
-          <div className="lg:col-span-5 relative mt-8 lg:mt-0">
+          {/* ================= SISI KANAN (45%): COCKPIT SIMULASI SIMETRIS & SEIMBANG ================= */}
+          <div className="lg:col-span-5 relative w-full flex justify-center lg:justify-end">
             
             {/* Subtle Ambient Light Glow Behind Mockup */}
-            <div className="absolute -inset-2 bg-gradient-to-tr from-white/[0.03] to-transparent rounded-3xl blur-2xl pointer-events-none" />
+            <div className="absolute inset-0 bg-white/[0.02] rounded-3xl blur-3xl pointer-events-none" />
 
-            {/* Floating Card 1: Top-Right AI Tutor Whisper Card */}
-            <div className="relative lg:-top-3 lg:-right-3 z-20 mb-3 lg:mb-0 max-w-sm ml-auto metallic-badge rounded-2xl p-3.5 backdrop-blur-xl border border-white/[0.14] shadow-2xl">
-              <div className="flex items-center gap-2 mb-1.5">
-                <div className="w-5 h-5 rounded-md bg-white/10 flex items-center justify-center text-white">
-                  <Bot className="w-3 h-3 text-white" />
-                </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-white/90 font-semibold">
-                  AI Tutor · Nalar Kilat
-                </span>
-                <span className="ml-auto w-1.5 h-1.5 rounded-full bg-white/60" />
-              </div>
-              <p className="text-xs text-[#d1d5db] leading-relaxed">
-                "Jarak naik 3x ➔ Gayanya langsung dibagi 3² (bagi 9) ➔ <strong className="text-white">1/9 F semula</strong>. Selesai 5 detik!"
-              </p>
-            </div>
-
-            {/* Main Center Card: Cockpit Simulasi Berwaktu Live */}
-            <div className="relative z-10 metallic-sheen rounded-2xl p-5 sm:p-6 border border-white/[0.14] shadow-2xl backdrop-blur-2xl">
+            {/* Precision Unified Cockpit Window */}
+            <div className="w-full max-w-lg metallic-sheen rounded-2xl border border-white/[0.14] shadow-2xl backdrop-blur-2xl overflow-hidden relative z-10">
               
-              {/* Header Bar */}
-              <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/[0.08]">
+              {/* Window Header Bar (Industrial Hardware Style) */}
+              <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/[0.08] bg-[#07090e]/80">
                 <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80 animate-pulse" />
-                  <span className="font-mono text-[11px] text-white font-medium">
-                    SIMULASI BERWAKTU
+                  <div className="w-2.5 h-2.5 rounded-full bg-white/20 border border-white/30" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-white/20 border border-white/30" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-white/20 border border-white/30" />
+                  <span className="ml-2 font-mono text-[11px] text-[#9496a1] tracking-wider uppercase">
+                    COCKPIT SIMULASI
                   </span>
                 </div>
-                <div className="flex items-center gap-2 font-mono text-[11px] text-[#9496a1]">
-                  <span className="px-2 py-0.5 rounded bg-white/[0.06] text-white border border-white/[0.08]">
-                    42:15
+                
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-[11px] text-white font-medium px-2.5 py-0.5 rounded-md bg-white/[0.08] border border-white/[0.12]">
+                    ⏱ 42:15
                   </span>
-                  <span>NO 14/40</span>
+                  <span className="font-mono text-[10px] text-[#9496a1]">
+                    14/40
+                  </span>
                 </div>
               </div>
 
-              {/* Soal Preview */}
-              <div className="mb-4">
-                <span className="inline-block px-2 py-0.5 rounded bg-white/[0.06] text-[10px] font-mono text-[#9496a1] mb-2 border border-white/[0.06]">
-                  INDIKATOR C3 · LISTRIK STATIS
-                </span>
-                <p className="text-xs sm:text-sm text-white font-medium leading-relaxed">
-                  Dua buah muatan mula-mula mengalami gaya tolak F. Jika jarak kedua muatan dijauhkan menjadi 3 kali semula, besar gaya tolaknya menjadi...
-                </p>
-              </div>
+              {/* Window Body */}
+              <div className="p-5 sm:p-6 space-y-4">
+                
+                {/* Question Info & Question Text */}
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[10px] font-mono text-[#9496a1] uppercase tracking-wider bg-white/[0.04] px-2 py-0.5 rounded border border-white/[0.06]">
+                      Listrik Statis · Level C3
+                    </span>
+                    <span className="text-[10px] font-mono text-white/80">
+                      Bobot: 2.5 Poin
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-white font-medium leading-relaxed">
+                    Dua buah muatan mula-mula mengalami gaya tolak F. Jika jarak kedua muatan dijauhkan menjadi 3 kali semula, besar gaya tolaknya menjadi...
+                  </p>
+                </div>
 
-              {/* 4 Opsi Jawaban (Mockup) */}
-              <div className="space-y-2 mb-4">
-                {[
-                  { key: 'A', text: '3 kali F semula', active: false },
-                  { key: 'B', text: '1/9 kali F semula (Trik Nalar)', active: true },
-                  { key: 'C', text: '9 kali F semula', active: false },
-                  { key: 'D', text: '1/3 kali F semula', active: false },
-                ].map((opt) => (
-                  <div
-                    key={opt.key}
-                    className={`flex items-center gap-2.5 p-2.5 rounded-xl text-xs transition-all ${
-                      opt.active
-                        ? 'bg-white/[0.12] text-white border border-white/30 shadow-inner'
-                        : 'bg-[#06070a]/60 text-[#9496a1] border border-white/[0.06]'
-                    }`}
-                  >
-                    <span
-                      className={`w-5 h-5 rounded-md flex items-center justify-center font-mono text-[10px] font-bold ${
+                {/* 4 Opsi Jawaban (Mockup) */}
+                <div className="space-y-2">
+                  {[
+                    { key: 'A', text: '3 kali F semula', active: false },
+                    { key: 'B', text: '1/9 kali F semula (Trik Nalar)', active: true },
+                    { key: 'C', text: '9 kali F semula', active: false },
+                    { key: 'D', text: '1/3 kali F semula', active: false },
+                  ].map((opt) => (
+                    <div
+                      key={opt.key}
+                      className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs transition-all ${
                         opt.active
-                          ? 'bg-white text-black'
-                          : 'bg-white/[0.08] text-white/70'
+                          ? 'bg-white/[0.12] text-white border border-white/30 shadow-inner'
+                          : 'bg-[#06070a]/60 text-[#9496a1] border border-white/[0.06]'
                       }`}
                     >
-                      {opt.key}
-                    </span>
-                    <span className={opt.active ? 'font-medium text-white' : ''}>
-                      {opt.text}
-                    </span>
-                    {opt.active && (
-                      <span className="ml-auto text-[10px] font-mono text-white/90 font-medium">
-                        ✓ Terpilih
+                      <span
+                        className={`w-5 h-5 rounded-md flex items-center justify-center font-mono text-[10px] font-bold ${
+                          opt.active
+                            ? 'bg-white text-black'
+                            : 'bg-white/[0.08] text-white/70'
+                        }`}
+                      >
+                        {opt.key}
                       </span>
-                    )}
+                      <span className={opt.active ? 'font-medium text-white' : ''}>
+                        {opt.text}
+                      </span>
+                      {opt.active && (
+                        <span className="ml-auto text-[10px] font-mono text-white/90 font-medium">
+                          ✓ Terpilih
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Integrated AI Tutor Whisper Box (Simetris di Dalam Frame) */}
+                <div className="p-3.5 rounded-xl bg-[#06070a]/90 border border-white/[0.08] space-y-1.5">
+                  <div className="flex items-center justify-between text-[10px] font-mono">
+                    <span className="flex items-center gap-1.5 text-white/90 font-semibold">
+                      <Bot className="w-3.5 h-3.5" />
+                      <span>AI TUTOR · NALAR CEPAT</span>
+                    </span>
+                    <span className="text-white/60">5 Detik Solved</span>
                   </div>
-                ))}
+                  <p className="text-[11px] text-[#d1d5db] leading-relaxed">
+                    "Gaya Coulomb berbanding terbalik sama kuadrat jarak. Jarak naik 3x ➔ tinggal dibagi 3² (bagi 9) ➔ <strong className="text-white">1/9 F semula</strong>."
+                  </p>
+                </div>
+
+                {/* Symmetrical Footer: Score Forecast & Cheat Sheet Tag */}
+                <div className="pt-2 flex items-center justify-between text-[11px] font-mono border-t border-white/[0.06]">
+                  <div className="flex items-center gap-1.5 text-[#9496a1]">
+                    <Printer className="w-3.5 h-3.5 text-white/70" />
+                    <span>Cheat Sheet Ready (A4)</span>
+                  </div>
+                  <span className="text-white font-bold bg-white/[0.08] px-2.5 py-1 rounded-lg border border-white/[0.15]">
+                    PREDIKSI: 95/100 (A)
+                  </span>
+                </div>
+
               </div>
 
-              {/* Score Forecast Bar Preview */}
-              <div className="pt-3 border-t border-white/[0.08] flex items-center justify-between text-[11px] font-mono">
-                <span className="text-[#9496a1]">PREDIKSI NILAI:</span>
-                <span className="text-white font-bold bg-white/[0.08] px-2 py-0.5 rounded border border-white/[0.15]">
-                  95 / 100 (PREDIKAT A)
-                </span>
-              </div>
-
-            </div>
-
-            {/* Floating Card 3: Bottom-Left Smart Cheat Sheet Snippet */}
-            <div className="relative lg:-bottom-4 lg:-left-3 z-20 mt-3 lg:mt-0 max-w-xs metallic-badge rounded-2xl p-3 backdrop-blur-xl border border-white/[0.14] shadow-2xl">
-              <div className="flex items-center gap-2 mb-1.5">
-                <Printer className="w-3.5 h-3.5 text-white/80" />
-                <span className="text-[10px] font-mono uppercase tracking-wider text-white/90 font-semibold">
-                  Cheat Sheet Siap Cetak
-                </span>
-                <span className="ml-auto text-[9px] font-mono text-[#9496a1]">Format A4</span>
-              </div>
-              <div className="p-2 rounded-lg bg-[#06070a] border border-white/[0.08] font-mono text-[10px] text-white/90">
-                <span className="text-[#9496a1]">Listrik Dinamis:</span> V = I × R (Veri = Ika × Roni)
-              </div>
             </div>
 
           </div>
