@@ -111,7 +111,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({
         {/* Hero Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.12] text-xs text-[#d1d5db] mb-6 shadow-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-medium text-white/90">Edisi Eksklusif Ujian Semester (AAS / SAS / PAS) 2026</span>
+          <span className="font-medium text-white/90">Sistem Belajar Cerdas Berbasis AI</span>
+          <span className="text-white/30">·</span>
+          <span className="text-[#9496a1] font-mono text-[11px]">2026 Edition</span>
         </div>
 
         {/* Hero Title */}
@@ -353,8 +355,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="space-y-3 text-center md:text-left">
-              <span className="layers-pill py-0.5 px-3 text-[10px] text-white/90 bg-white/[0.06] border-white/[0.1]">
-                PENAWARAN SPESIAL UJIAN
+              <span className="layers-pill py-0.5 px-3 text-[10px] text-white/90 bg-white/[0.06] border-white/[0.1] font-mono tracking-wider">
+                ALL-ACCESS PASS
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
                 Akses Penuh Semua Mapel VIP

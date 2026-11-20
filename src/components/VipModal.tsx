@@ -96,7 +96,7 @@ export const VipModal: React.FC<VipModalProps> = ({
             {/* Price Tag */}
             <div className="p-4 rounded-2xl bg-[#0e1017] border border-white/[0.08] flex items-center justify-between">
               <div>
-                <span className="text-[11px] text-[#9496a1] block">Harga Spesial Sekali Bayar</span>
+                <span className="text-[11px] text-[#9496a1] block">Akses Penuh Sekali Bayar</span>
                 <span className="text-2xl font-bold font-mono text-white tracking-tight">
                   Rp 15.000
                 </span>
